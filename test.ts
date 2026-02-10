@@ -1,20 +1,16 @@
-import {summation} from "./solution"
-import {assert} from "chai"
+import { assert } from "chai";
 
-describe('Testing...', function() {
-  it('Basic Tests', () => {
-    assert.equal(summation(1), 1)
-    assert.equal(summation(8), 36)
-    assert.equal(summation(22), 253)
-    assert.equal(summation(100), 5050)
-    assert.equal(summation(213), 22791)
+import { smallEnough } from "./solution";
+
+describe("Small enough? - Beginner", () => {
+  it("Fixed tests", () => {
+    assert.strictEqual(smallEnough([66, 101], 200), true);
+    assert.strictEqual(smallEnough([78, 117, 110, 99, 104, 117, 107, 115], 100), false);
+    assert.strictEqual(smallEnough([101, 45, 75, 105, 99, 107], 107), true);
+    assert.strictEqual(smallEnough([80, 117, 115, 104, 45, 85, 112, 115], 120), true);
+    assert.strictEqual(smallEnough([1,1, 1, 1, 1, 2], 1), false);
+    assert.strictEqual(smallEnough([78, 33, 22, 44, 88, 9, 6], 87), false);
+    assert.strictEqual(smallEnough([1, 2, 3, 4, 5, 6, 7, 8, 9], 10), true);
+    assert.strictEqual(smallEnough([12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12], 12), true);
   })
-  
-  it('Random tests', function() {
-    const solution = (num: number) => { return [...Array(num+1).keys()].reduce((x,y)=>x+y) }
-    [...Array(100)].forEach((e)=> {
-      let rand: number = Math.floor(Math.random()*1000) + 1
-      assert.equal(summation(rand), solution(rand))
-    })
-  })
-})
+});

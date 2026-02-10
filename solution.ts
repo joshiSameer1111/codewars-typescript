@@ -1,8 +1,9 @@
-export const summation = (num:number)=> { 
-  let sum = 0;
-  for(let i = 1; i <= num; i++) {
-    sum += i ;
-  }
-  return sum;
-  throw new Error('The method or operation is not implemented.')
-}   
+export function smallEnough(arr: number[], limit: number): boolean{
+  
+//for(let num of arr) {
+//    if(num > limit) {
+//      return false;
+//    }
+//  }
+  return arr.every(num => num <= limit);
+}
