@@ -1,7 +1,3 @@
-export function solution(str: string): string {
-  let reversed = '';
-  for (let i = str.length - 1; i >= 0; i--) {
-    reversed += str[i];
-  }
-  return reversed;
+export function findSmallestInt(args: number[]): number {
+  return Math.min(...args);
 }

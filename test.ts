@@ -1,12 +1,12 @@
-import solution = require('./solution');
-// import the type of assertion library you wish to use (Chai recommended)
+import {findSmallestInt} from "./solution";
 import {assert} from "chai";
 
-describe("Sample Test Cases", function(){
-  it("Should return a string", function() {
-    assert.equal(solution.solution('world'), 'dlrow');
-    assert.equal(solution.solution('hello'), 'olleh');
-    assert.equal(solution.solution(''), '');
-    assert.equal(solution.solution('h'), 'h');
+describe("Smallest Integer Tests", function() {
+  it("Fixed Tests", function() {
+    assert.strictEqual(findSmallestInt([78,56,232,12,8]),8,'Should return the smallest int 8');
+    assert.strictEqual(findSmallestInt([78,56,232,12,18]),12,'Should return the smallest int 12');
+    assert.strictEqual(findSmallestInt([78,56,232,412,228]),56,'Should return the smallest int 56');
+    assert.strictEqual(findSmallestInt([78,56,232,12,0]),0,'Should return the smallest int 0');
+    assert.strictEqual(findSmallestInt([1,56,232,12,8]),1,'Should return the smallest int 1');
   });
-});
+});  
