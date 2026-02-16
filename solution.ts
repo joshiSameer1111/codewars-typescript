@@ -1,3 +1,7 @@
-export function litres(time: number): number {
-  return Math.floor(time * 0.5);
+export function evenOrOdd(n:number):string {
+  if(n % 2 === 0) {
+    return "Even";
+  } else {
+    return "Odd";
+  }
 }
