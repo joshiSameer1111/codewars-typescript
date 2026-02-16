@@ -1,3 +1,7 @@
-export function repeatStr(num: number, str: string): string {
-  return str.repeat(num);
+export function monkeyCount(n: number) {
+  const monkeys: number[] = [];
+  for (let i = 1; i <= n; i++) {
+    monkeys.push(i);
+  }
+  return monkeys;
 }

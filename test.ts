@@ -1,16 +1,20 @@
-import solution = require('./solution');
+import { assert } from "chai";
+import { monkeyCount } from "./solution";
 
-import {assert} from "chai";
-
-describe("solution", function(){
-  it("Tests", function(){
-    assert.equal(solution.repeatStr(3, "*"), "***");
-    assert.equal(solution.repeatStr(5, "#"), "#####");
-    assert.equal(solution.repeatStr(2, "ha "), "ha ha ");
-    assert.equal(solution.repeatStr(0, "qwerty"), "");
-    assert.equal(solution.repeatStr(0, ""), "");
-    assert.equal(solution.repeatStr(5, ""), "");
-    assert.equal(solution.repeatStr(6, "I"), "IIIIII");
-    assert.equal(solution.repeatStr(5, "Hello"), "HelloHelloHelloHelloHello");
+describe("Fixed tests", () => {
+  it("Testing for 5", () => {
+    assert.deepEqual(monkeyCount(5), [1, 2, 3, 4, 5]);
+  });
+  it("Testing for 3", () => {
+    assert.deepEqual(monkeyCount(3), [1, 2, 3]);
+  });
+  it("Testing for 9", () => {
+    assert.deepEqual(monkeyCount(9), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  });
+  it("Testing for 10", () => {
+    assert.deepEqual(monkeyCount(10), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+  });
+  it("Testing for 20", () => {
+    assert.deepEqual(monkeyCount(20), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]);
   });
 });
