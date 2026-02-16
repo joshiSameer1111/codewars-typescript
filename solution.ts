@@ -1,7 +1,7 @@
-export function evenOrOdd(n:number):string {
-  if(n % 2 === 0) {
-    return "Even";
+export const boolToWord = (bool: boolean): string => {
+  if (bool) {
+    return "Yes";
   } else {
-    return "Odd";
+    return "No";
   }
-}
+};
