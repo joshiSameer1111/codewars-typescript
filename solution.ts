@@ -1,3 +1,3 @@
-export function stringToArray(s: string): string[] {
-  return s.split(' ');
+export function repeatStr(num: number, str: string): string {
+  return str.repeat(num);
 }

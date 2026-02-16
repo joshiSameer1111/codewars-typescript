@@ -1,13 +1,16 @@
-import { stringToArray } from './solution';
-import chai, { assert } from 'chai';
-chai.config.truncateThreshold = 0;
+import solution = require('./solution');
 
-describe('stringToArray', () => {
-  it('example 1', () => {
-    assert.deepEqual(stringToArray("Robin Singh"), ["Robin", "Singh"]);
-  });
-  
-  it('example 2', () => {
-    assert.deepEqual(stringToArray("I love arrays they are my favorite"), ["I", "love", "arrays", "they", "are", "my", "favorite"]);
+import {assert} from "chai";
+
+describe("solution", function(){
+  it("Tests", function(){
+    assert.equal(solution.repeatStr(3, "*"), "***");
+    assert.equal(solution.repeatStr(5, "#"), "#####");
+    assert.equal(solution.repeatStr(2, "ha "), "ha ha ");
+    assert.equal(solution.repeatStr(0, "qwerty"), "");
+    assert.equal(solution.repeatStr(0, ""), "");
+    assert.equal(solution.repeatStr(5, ""), "");
+    assert.equal(solution.repeatStr(6, "I"), "IIIIII");
+    assert.equal(solution.repeatStr(5, "Hello"), "HelloHelloHelloHelloHello");
   });
 });
