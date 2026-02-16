@@ -1,6 +1,3 @@
-export const zeroFuel = (distance: number, mpg: number, fuelLeft: number): boolean => {
-   if(distance <= (mpg * fuelLeft)){
-    return true;  
-  };
-  return false;
-};
+export function litres(time: number): number {
+  return Math.floor(time * 0.5);
+}
