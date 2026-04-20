@@ -1,7 +1,10 @@
-// return the two oldest/oldest ages within the array of ages passed in.
-// it should return the two ages as a sorted array, youngest age first
-export function twoOldestAges(ages: number[]): number[] {
-  return ages
-  .sort((a, b) => a - b)   // sort ascending
-    .slice(-2);    
-}
+export const digitalRoot = (n:number):number => {
+  while (n >= 10) {
+    n = n
+      .toString()
+      .split('')
+      .reduce((sum, digit) => sum + Number(digit), 0);
+  }
+  return n;
+
+};

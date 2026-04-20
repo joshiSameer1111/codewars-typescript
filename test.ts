@@ -1,9 +1,9 @@
-import { twoOldestAges } from './solution';
-import chai, { assert } from "chai";
-chai.config.truncateThreshold = 0;
+import {assert} from "chai";
+import {digitalRoot} from './solution';
 
-describe("Two Oldest Age", () => {
-  it("twoOldestAges([1,5,87,45,8,8]) should return [45,87]", () => {
-    assert.deepEqual(twoOldestAges([1, 5, 87, 45, 8, 8]), [45, 87]);
+describe("solution", () => {
+  it('should work for fixed tests', () => {
+    assert.equal(digitalRoot(16), 7);
+    assert.equal(digitalRoot(456), 6 );
   });
 });
