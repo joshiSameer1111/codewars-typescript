@@ -1,11 +1,9 @@
-import { assert } from 'chai';
+import { twoOldestAges } from './solution';
+import chai, { assert } from "chai";
+chai.config.truncateThreshold = 0;
 
-import { findOutlier } from './solution';
-
-it('Simple tests', function() {
-  assert.equal(findOutlier([0, 1, 2]), 1);
-  assert.equal(findOutlier([1, 2, 3]), 2);
-  assert.equal(findOutlier([2, 6, 8, 10, 3]), 3);
-  assert.equal(findOutlier([0, 0, 3, 0, 0]), 3);
-  assert.equal(findOutlier([1, 1, 0, 1, 1]), 0);
+describe("Two Oldest Age", () => {
+  it("twoOldestAges([1,5,87,45,8,8]) should return [45,87]", () => {
+    assert.deepEqual(twoOldestAges([1, 5, 87, 45, 8, 8]), [45, 87]);
+  });
 });

@@ -1,9 +1,7 @@
-export function findOutlier(integers: number[]): number {
-  const even = integers.filter((x) => x % 2 == 0);
-  const odd = integers.filter((x) => x % 2 != 0);
-  if (even.length == 1) {
-    return even[0];
-  } else {
-    return odd[0];
-  }
+// return the two oldest/oldest ages within the array of ages passed in.
+// it should return the two ages as a sorted array, youngest age first
+export function twoOldestAges(ages: number[]): number[] {
+  return ages
+  .sort((a, b) => a - b)   // sort ascending
+    .slice(-2);    
 }
